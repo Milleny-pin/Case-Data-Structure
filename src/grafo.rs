@@ -14,9 +14,9 @@ impl GrafoDeProdutos {
         }
     }
 
-    // Corrigido com clone
+    
     pub fn adicionar_produto(&mut self, produto: Produto) {
-        self.produtos.insert(produto.id, produto.clone()); // Clona o produto antes de inserir
+        self.produtos.insert(produto.id, produto.clone()); 
         self.adjacencias.entry(produto.id).or_insert(HashSet::new());
     }
 
